@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-md navbar-light bg-primary sticky-top">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">Local Hops</a>
+      <div class="nav-collapse">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/logout">Logout</a> 
+        </div>
+      </div>
+  </div>
+</nav>
+
+<div class="container" id="profile-container">
+    <h1 id="user" class="header"></h1> 
+    <h2 class="greeting">Here is a list of your favorite breweries. If you do not have any favorites, or would like to add more, please click <a href="/brewery">here</a></h2>
+    <div id="favs">
+        {{#each breweries}}
+            <div class="favorite-breweries">
+                <p>{{name}}</p>
+                <p>{{city}}</p>
+                <p>{{address}}</p>
+                <p>{{phonenumber}}</p>
+            </div>
+        {{/each}}
+    </div>
+</div>
